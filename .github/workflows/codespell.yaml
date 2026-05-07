@@ -3,12 +3,13 @@ on:
   push:
     branches:
       - main
+      - master
   pull_request:
 # Declare default permissions as read only.
 permissions: read-all
 jobs:
   codespell:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repo
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
